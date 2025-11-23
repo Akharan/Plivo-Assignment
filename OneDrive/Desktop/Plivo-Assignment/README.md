@@ -2,6 +2,14 @@
 
 This repo is a skeleton for a token-level NER model that tags PII in STT-style transcripts.
 
+## Submission
+
+The submission folder contains the following files
+- `**dev.jsonl**`: This file contains 200 dev datapoints with labels
+- `**dev_pred.json**`: This file contains the model NER Predictions for all the above 200 datapoints in the same order
+- `**metrics.txt**`: This file contains the prediction metrics (Precision,F1,etc:) for all the label classes
+- `**latency.txt**`: This file contains the p50 and p95 latency values for 50 runs
+
 ## Setup
 
 ```bash
@@ -45,3 +53,4 @@ python src/measure_latency.py \
 ```
 
 Your task in the assignment is to modify the model and training code to improve entity and PII detection quality while keeping **p95 latency below ~20 ms** per utterance (batch size 1, on a reasonably modern CPU).
+
