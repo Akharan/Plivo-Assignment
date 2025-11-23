@@ -10,6 +10,13 @@ The submission folder contains the following files
 - `**metrics.txt**`: This file contains the prediction metrics (Precision,F1,etc:) for all the label classes
 - `**latency.txt**`: This file contains the p50 and p95 latency values for 50 runs
 
+## Major Model decisions and Hyperparameters
+- Model: bert-base-uncased
+- Epochs: 10
+- Learning Rate: 5e-5
+- Batch Size: 8
+- The model was able to achieve 100% precision and f1-score for all the label classes with latency less than 10 ms. So, I did not do further hyperparameter tuning.
+
 ## Setup
 
 ```bash
